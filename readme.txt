@@ -1,9 +1,9 @@
 === Interactive Polish Map  ===
-Contributors: alexrabe
+Contributors: iworks
 Donate link: http://alexrabe.de/donation/
 Tags: map,mapa,polish, polska,interactive
 Requires at least: 3.0
-Tested up to: 3.0
+Tested up to: 3.0.4
 Stable tag: trunk
 
 Interaktywna mapa polski wykana na podstawie
@@ -11,7 +11,7 @@ Interaktywna mapa polski wykana na podstawie
 
 == Description ==
 
-Interaktywna mapa polski wykana na podstawie:POLSKA, KLIKALNA MAPA WOJEWÓDZTW WERSJA - 1.3 - 26.10.2009 AUTOR - Winston_Wolf http://winstonwolf.pl/contact.html
+Interaktywna mapa polski wykana na podstawie: OLSKA, KLIKALNA MAPA WOJEWÓDZTW WERSJA - 1.3 - 26.10.2009 AUTOR - Winston_Wolf http://winstonwolf.pl/contact.html
 
 
 == Changelog == 

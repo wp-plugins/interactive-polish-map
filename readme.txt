@@ -6,7 +6,7 @@ Requires at least: 3.0
 Tested up to: 3.0.4
 Stable tag: trunk
 
-Interaktywna mapa polski wykana na podstawie
+Interaktywna mapa Polski.
 
 
 == Description ==

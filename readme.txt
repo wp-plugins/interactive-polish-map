@@ -4,7 +4,7 @@ Donate link: http://alexrabe.de/donation/
 Tags: map,mapa,polish, polska,interactive
 Requires at least: 3.0
 Tested up to: 3.0.4
-Stable tag: 0.1
+Stable tag: 1.0
 
 Interaktywna mapa Polski.
 
@@ -32,7 +32,16 @@ Interaktywna mapa Polski wykonana na podstawie: <a href="http://winstonwolf.pl/c
 
 == Changelog == 
 
+= 1.0 - 2011-02-04 =
+
+* NEW: Added widget.
+* NEW: Added option to choose list.
+* NEW: Added Polish translation.
+* NEW: Created POT file.
+* Changed: js files marged to one.
+* Changed: css files marged to one.
+
 = 0.1 - 2011-01-29 =
 
-* NEW : Init revision
+* NEW : Init revision.
 

@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Interactive Polish Map
-Description: Version: trunk
+Description: Version: 1.0
 Author: Marcin Pietrzak
 Author URI: http://iworks.pl
 */

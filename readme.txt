@@ -1,6 +1,6 @@
 === Interactive Polish Map  ===
 Contributors: iworks
-Donate link: http://alexrabe.de/donation/
+Donate link: http://iworks.pl/donate/ipm.php
 Tags: map,mapa,polish, polska,interactive
 Requires at least: 3.0
 Tested up to: 3.0.4

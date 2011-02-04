@@ -11,8 +11,16 @@ Interaktywna mapa Polski.
 
 == Description ==
 
-Interaktywna mapa Polski wykonana na podstawie: OLSKA, KLIKALNA MAPA WOJEWÓDZTW WERSJA - 1.3 - 26.10.2009 AUTOR - <a href="http://winstonwolf.pl/contact.html">Winston_Wolf</a>.
+The best way to convert a list of Polish regions into stylish clickable map.
+It doesn't need Flash Player or any additional plug-ins!
 
+* hand coded, valid xHTML and CSS
+* preloader
+* quasi-tooltips or list of countries
+* no flash player required!
+* on author page available full editable PSD with source file
+
+Interaktywna mapa Polski wykonana na podstawie: <a href="http://winstonwolf.pl/css,polska.html">Polska, klikalna mapa województw wersja - 1.3 - 26.10.2009</a> -  autor - <a href="http://winstonwolf.pl/contact.html">winston_wolf</a>.
 
 == Installation ==
 

@@ -1,7 +1,8 @@
 <?php
 /*
 Plugin Name: Interactive Polish Map
-Description: Version: trunk
+Description: Interactive Polish Map display Polish map using shortcode or widget.
+Version: trunk
 Author: Marcin Pietrzak
 Author URI: http://iworks.pl
 */
@@ -71,7 +72,15 @@ function ipm_admin_init()
 
 function ipm_add_pages()
 {
-    add_submenu_page('options-general.php', __('Interactive Polish Map', 'interactive_polish_map'), __('Interactive Polish Map', 'interactive_polish_map'), 'edit_posts', 'solr-search-settings', 'ipm_settings');
+    add_submenu_page
+        (
+            'options-general.php',
+            __('Interactive Polish Map', 'interactive_polish_map'),
+            __('Interactive Polish Map', 'interactive_polish_map'),
+            'edit_posts',
+            'ipm_settings',
+            'ipm_settings'
+        );
 }
 
 function ipm_produce_radio($name, $title, $options, $default)
@@ -154,12 +163,22 @@ function ipm_shortcode()
     echo '</ul></div>';
 }
 
+function imp_plugin_links( $links, $file )
+{
+    if ( $file == plugin_basename(__FILE__) ) {
+        $links[] = '<a href="options-general.php?page=ipm_settings">' . __('Settings') . '</a>';
+        $links[] = '<a href="http://iworks.pl/donate/ipm.php">' . __('Donate') . '</a>';
+    }
+    return $links;
+}
+
 function ipm_init()
 {
-        wp_register_script( 'interactive_polish_map', plugins_url('/js/interactive_polish_map.js', __FILE__), array('jquery') );
-        wp_enqueue_script('interactive_polish_map');
-        wp_register_style('myStyleSheets', plugins_url('/style/interactive_polish_map.css', __FILE__) );
-        wp_enqueue_style( 'myStyleSheets');
+    wp_register_script( 'interactive_polish_map', plugins_url('/js/interactive_polish_map.js', __FILE__), array('jquery') );
+    wp_enqueue_script('interactive_polish_map');
+    wp_register_style('myStyleSheets', plugins_url('/style/interactive_polish_map.css', __FILE__) );
+    wp_enqueue_style( 'myStyleSheets');
+    add_filter('plugin_row_meta', 'imp_plugin_links', 10, 2 );
 }
 /**
  * load snippets

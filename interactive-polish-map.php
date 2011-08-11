@@ -2,7 +2,7 @@
 /*
 Plugin Name: Interactive Polish Map
 Description: Interactive Polish Map display Polish map using shortcode or widget.
-Version: trunk
+Version: 1.0.1
 Author: Marcin Pietrzak
 Author URI: http://iworks.pl
 */
@@ -160,7 +160,7 @@ function ipm_shortcode()
                 $value
             );
     }
-    echo '</ul></div>';
+    return '</ul></div>';
 }
 
 function imp_plugin_links( $links, $file )

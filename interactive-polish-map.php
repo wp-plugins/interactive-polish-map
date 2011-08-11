@@ -160,7 +160,7 @@ function ipm_shortcode()
                 $value
             );
     }
-    echo '</ul></div>';
+    return '</ul></div>';
 }
 
 function imp_plugin_links( $links, $file )

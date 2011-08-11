@@ -3,7 +3,7 @@ Contributors: iworks
 Donate link: http://iworks.pl/donate/ipm.php
 Tags: map,mapa,polish, polska,interactive
 Requires at least: 3.0
-Tested up to: 3.0.4
+Tested up to: 3.2.1
 Stable tag: 1.0
 
 Interaktywna mapa Polski.
@@ -31,6 +31,10 @@ Interaktywna mapa Polski wykonana na podstawie: <a href="http://winstonwolf.pl/c
 
 
 == Changelog == 
+
+= 1.0.1 - 2011-02-04 =
+
+* BUGFIX: Shortcode always place map on top of entry (echo was used instead of return)
 
 = 1.0 - 2011-02-04 =
 

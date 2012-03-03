@@ -2,7 +2,7 @@
 /*
 Plugin Name: Interactive Polish Map
 Description: Interactive Polish Map display Polish map using shortcode or widget.
-Version: trunk
+Version: 1.0.2
 Author: Marcin Pietrzak
 Author URI: http://iworks.pl
 */
@@ -144,14 +144,14 @@ function ipm_settings()
 function ipm_shortcode()
 {
     global $ipm_data;
-    printf ('<div id="ipm_type_%d"><ul id="w" class="%s">', get_option('ipm_type', 500), get_option('ipm_menu', 'ponizej'));
+    $content = sprintf ('<div id="ipm_type_%d"><ul id="w" class="%s">', get_option('ipm_type', 500), get_option('ipm_menu', 'ponizej'));
     $i = 1;
     foreach ($ipm_data['districts'] as $key => $value) {
         $url = get_option('ipm_districts_'.$key, '%');
         if (!$url) {
             $url = '#';
         }
-        printf
+        $content .= sprintf
             (
                 '<li id="w%d"><a href="%s" title="%s">%s</a></li>',
                 $i++,
@@ -160,7 +160,8 @@ function ipm_shortcode()
                 $value
             );
     }
-    return '</ul></div>';
+    $content .= '</ul></div>';
+    return $content;
 }
 
 function imp_plugin_links( $links, $file )

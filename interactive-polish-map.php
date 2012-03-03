@@ -1,6 +1,7 @@
 <?php
 /*
 Plugin Name: Interactive Polish Map
+Plugin URI: http://wordpress.org/extend/plugins/interactive-polish-map/
 Description: Interactive Polish Map display Polish map using shortcode or widget.
 Version: trunk
 Author: Marcin Pietrzak
@@ -164,13 +165,14 @@ function ipm_shortcode()
     return $content;
 }
 
-function imp_plugin_links( $links, $file )
+function imp_plugin_links( $plugin_meta, $plugin_file, $plugin_data, $status )
 {
-    if ( $file == plugin_basename(__FILE__) ) {
-        $links[] = '<a href="options-general.php?page=ipm_settings">' . __('Settings') . '</a>';
-        $links[] = '<a href="http://iworks.pl/donate/ipm.php">' . __('Donate') . '</a>';
+
+    if ( strpos( $plugin_file, basename( __FILE__) )) {
+        $plugin_meta[] = '<a href="options-general.php?page=ipm_settings">' . __('Settings') . '</a>';
+        $plugin_meta[] = '<a href="http://iworks.pl/donate/ipm.php">' . __('Donate') . '</a>';
     }
-    return $links;
+    return $plugin_meta;
 }
 
 function ipm_init()
@@ -179,7 +181,7 @@ function ipm_init()
     wp_enqueue_script('interactive_polish_map');
     wp_register_style('myStyleSheets', plugins_url('/style/interactive_polish_map.css', __FILE__) );
     wp_enqueue_style( 'myStyleSheets');
-    add_filter('plugin_row_meta', 'imp_plugin_links', 10, 2 );
+    add_filter('plugin_row_meta', 'imp_plugin_links', 10, 4 );
 }
 /**
  * load snippets

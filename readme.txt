@@ -1,12 +1,12 @@
 === Interactive Polish Map  ===
 Contributors: iworks
 Donate link: http://iworks.pl/donate/ipm.php
-Tags: map,mapa,polish, polska,interactive
+Tags: map, mapa, polish, polska, interactive, mapa polski, interaktywna mapa polski, mapa województw
 Requires at least: 3.0
 Tested up to: 3.3.1
 Stable tag: 1.0.2
 
-Interaktywna mapa Polski.
+Interaktywna mapa Polski, która pozwala na podłączenie odnośników pod województwa.
 
 
 == Description ==

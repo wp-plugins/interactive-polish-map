@@ -1,5 +1,5 @@
 === Interactive Polish Map  ===
-Contributors: iworks
+Contributors: iworks, marcin-s
 Donate link: http://iworks.pl/donate/ipm.php
 Tags: map, mapa, polish, polska, interactive, mapa polski, interaktywna mapa polski, mapa województw
 Requires at least: 3.0

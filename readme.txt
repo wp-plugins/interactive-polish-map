@@ -2,8 +2,8 @@
 Contributors: iworks, marcin-s
 Donate link: http://iworks.pl/donate/ipm.php
 Tags: map, mapa, polish, polska, interactive, mapa polski, interaktywna mapa polski, mapa województw
-Requires at least: 3.0
-Tested up to: 3.3.1
+Requires at least: 3.333
+Tested up to: 4.0
 Stable tag: 1.0.2
 
 Interaktywna mapa Polski, która pozwala na podłączenie odnośników pod województwa.

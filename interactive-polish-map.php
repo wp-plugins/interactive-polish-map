@@ -3,7 +3,7 @@
 Plugin Name: Interactive Polish Map
 Plugin URI: http://wordpress.org/extend/plugins/interactive-polish-map/
 Description: Interactive Polish Map display Polish map using shortcode or widget.
-Version: trunk
+Version: 1.1
 Author: Marcin Pietrzak
 Author URI: http://iworks.pl
 */

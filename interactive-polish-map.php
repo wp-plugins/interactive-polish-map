@@ -91,7 +91,10 @@ function ipm_produce_radio($name, $title, $options, $default)
     $content .= '<ul>';
     $i = 0;
     foreach ($options as $value => $data) {
-        $id = $name.$option['name'].$i++;
+        $id = $name.$i++;
+        if ( isset($option['name']) ) {
+            $id = $name.$option['name'].$i++;
+        }
         $content .= sprintf
             (
                 '<li><label for="%s"><input type="radio" name="%s" value="%s"%s id="%s"/> %s</label></li>',

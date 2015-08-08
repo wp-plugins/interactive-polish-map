@@ -2,14 +2,16 @@
 class InteractivePolishMapWidget extends WP_Widget
 {
     /** constructor */
-    function InteractivePolishMapWidget()
+    function __construct()
     {
-        $options = array
-            (
+        parent::__construct(
+            __CLASS__,
+            $name = __('Interactive Polish Map', 'interactive_polish_map'),
+            array (
                 'description' => __('Widget is used to place interactive polish map.', 'interactive_polish_map'),
-                'classname' => 'interactive_polish_map'
-            );
-        parent::WP_Widget(false, $name = __('Interactive Polish Map', 'interactive_polish_map'), $options);
+                'classname' => 'interactive_polish_map',
+            )
+        );
     }
 
     /** @see WP_Widget::widget */
@@ -23,6 +25,7 @@ class InteractivePolishMapWidget extends WP_Widget
          * content
          */
         $content = wp_cache_get($cache_id, 'InteractivePolishMapWidget');
+        $content = false;
         if ($content === false) {
             global $ipm_data;
             extract( $args );
@@ -32,8 +35,8 @@ class InteractivePolishMapWidget extends WP_Widget
             $content .= sprintf ('<div id="ipm_type_%d"><ul id="w" class="%s">', $instance['type'], $instance['menu']);
             $i = 1;
             foreach ($ipm_data['districts'] as $key => $value) {
-                $url = get_option('ipm_districts_'.$key, '%');
-                if (!$url) {
+                $url = get_option('ipm_districts_'.$key, '#');
+                if ( empty($url) ) {
                     $url = '#';
                 }
                 $content .= sprintf
@@ -75,14 +78,14 @@ class InteractivePolishMapWidget extends WP_Widget
                 __('Title:'),
                 $this->get_field_id('title'),
                 $this->get_field_name('title'),
-                esc_attr($instance['title'])
+                isset($instance['title'])? esc_attr($instance['title']):''
             );
         /**
          * type
          */
-        $current = $instance['type'];
-        if (is_null($current)) {
-            $current = 'standard';
+        $current = 'standard';
+        if ( isset($instance['type']) && !empty($instance['type'])) {
+            $current = $instance['type'];
         }
         $select = '';
         foreach($ipm_data['type'] as $value => $data) {
@@ -109,9 +112,9 @@ class InteractivePolishMapWidget extends WP_Widget
         /**
          * menu
          */
-        $current = $instance['menu'];
-        if (is_null($current)) {
-            $current = 'standard';
+        $current = 'standard';
+        if ( isset($instance['menu']) && !empty($instance['menu'])) {
+            $current = $instance['menu'];
         }
         $select = '';
         foreach($ipm_data['menu'] as $value => $data) {
@@ -138,5 +141,10 @@ class InteractivePolishMapWidget extends WP_Widget
     }
 
 }
-add_action('widgets_init', create_function('', 'return register_widget("InteractivePolishMapWidget");'));
+add_action(
+    'widgets_init',
+    function() {
+        register_widget("InteractivePolishMapWidget");
+    }
+);
 

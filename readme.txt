@@ -1,9 +1,9 @@
 === Interactive Polish Map  ===
-Contributors: iworks, marcin-s
+Contributors: iworks
 Donate link: http://iworks.pl/donate/ipm.php
 Tags: map, mapa, polish, polska, interactive, mapa polski, interaktywna mapa polski, mapa województw
-Requires at least: 3.333
-Tested up to: 4.0
+Requires at least: 3.4
+Tested up to: 4.3-RC2-33595
 Stable tag: 1.0.2
 
 Interaktywna mapa Polski, która pozwala na podłączenie odnośników pod województwa.
@@ -31,6 +31,11 @@ Interaktywna mapa Polski wykonana na podstawie: <a href="http://winstonwolf.pl/c
 
 
 == Changelog == 
+
+= 1.1 - 2015-08-08 =
+
+* IMPROVEMENT: Update method of WP_Widget - remove deprecated constructor.
+* BUGFIX: Handle some notices about undefined variables.
 
 = 1.0.2 - 2012-03-03 =
 
